@@ -1,14 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
-# Create your models here.
 
+class Reply(models.Model):
+    writer = models.ForeignKey(User,on_delete=models.CASCADE)
+    contents = models.CharField(max_length=200, null=True)
+    created_date = models.DateTimeField(auto_now_add=True)
 
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    nickname=
-    medal=
-    reply=
-
-
-class ranking(models.Model):
-    ranker=
+    class Meta:
+        ordering = ('created',)

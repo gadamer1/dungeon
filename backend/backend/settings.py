@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authuser',
     'rest_framework',
+    'rest_auth',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
@@ -81,7 +83,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 
 # Password validation
